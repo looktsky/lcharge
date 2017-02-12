@@ -1,0 +1,11 @@
+{
+  "tab-list-detail.html": {
+    "href": "tab-list-detail.html",
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js"
+    ],
+    "refer": [],
+    "priority": 0
+  }
+}
