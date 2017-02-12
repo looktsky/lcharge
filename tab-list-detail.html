@@ -1,40 +1,88 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8">
 		<title>L-记账</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-
 		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/app.css">
 		<style>
-			html,body {
-				background-color: #efeff4;
+			.det-title{
+				padding: 12px 0;
+				border-bottom: 1px solid #d9d9d9;
+				background: #FFFFFF;
+				margin: 0;
+	
 			}
-			.title{
-				margin: 20px 15px 10px;
-				color: #6d6d72;
-				font-size: 15px;
+			.det-title>li {
+				padding: 0;
+				display: inline-block;
+			}
+	
+			
+			.det-title>li:nth-child(1) {
+
+				width: 26%;
+			}
+			
+			.det-title>li:nth-child(2) {
+				width: 35%;
+			}
+			
+			.det-title>li:nth-child(3) {
+				width: 35%;
+			}
+			.det-title>li>span{
+				display: block;
+				font-size: 20px;
+				color: #979797;
+				text-align: center;
+			}
+			.det-title>li>div{
+				margin: 5px 0;
+				height: 50px;
+				line-height: 50px;
+				font-size: 36px;
+				text-align: center;
+				color: #000;
+			}
+	
+			.chos-date{
+				margin-right: -1px;
+				border-right: 1px solid #7e7e7e;
+			}
+			.sub-text{
+				font-size: 18px;
 			}
 		</style>
 	</head>
+
 	<body>
-		<div class="mui-content">
-			<div class="title">
-				<p>这是webview模式选项卡的第1个子页面</p>
-				<p>何谓webview模式？其实就是每个选项卡内容都是一个独立的webview，彼此之间互相独立、互不影响；
-					对于较为复杂的业务系统，推荐使用该模式。</p>
-				<p>基于webview模式的选项卡，支持原生加速的下拉刷新，点击第二个选项卡（“消息”），切换选项卡，体验下拉刷新；</p>
-			</div>
-		</div>
+
+		<ul class="det-title">
+			<li class="">
+				<span>2017年</span>
+				<div class="chos-date">03<span class="sub-text">月&nbsp;v</span></div>
+			</li>
+			<li class="">
+				<span>支出&nbsp;(元)</span>
+				<div>8.00</div>
+			</li>
+			<li class="">
+				<span>收入&nbsp;(元)</span>
+				<div>7.00</div>
+			</li>
+		</ul>
+
 	</body>
 	<script src="js/mui.min.js"></script>
 	<script>
 		mui.init({
-			swipeBack:true //启用右滑关闭功能
+			swipeBack: true //启用右滑关闭功能
 		});
-		
-		
 	</script>
+
 </html>

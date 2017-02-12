@@ -9,19 +9,42 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/app.css">
 		<style>
-			html,
-			body {
-				background-color: #efeff4;
-			}
+				#add-icon{
+					width: 60px;
+					height: 60px;
+					background: #F7F7F7;
+					position: absolute;
+					margin-left: -30px;
+					top: -30px;
+					left: 50%;
+					border-radius: 50%;
+					border-top: 1px solid #B7B7BB;
+				}
+				#add-icon>div{
+					overflow: hidden;
+					width: 50px;
+					height: 50px;
+					position: absolute;
+					top: 5px;
+					left: 5px;
+					background:url(img/add-icon.gif) no-repeat ;
+					background-position: center;
+					background-size: cover;
+				}
+				.mui-tab-label{
+					padding-top:7px ;
+				}
 		</style>
 	</head>
 
 	<body>
 		<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
 			<h1 id="title" class="mui-title">L-记账</h1>
 		</header>
+		<div class="hid-div">111</div>
 		<nav class="mui-bar mui-bar-tab">
 			<a id="defaultTab" class="mui-tab-item mui-active" href="tab-list-detail.html'">
 				<span class="mui-icon mui-icon-home"></span>
@@ -32,7 +55,10 @@
 				<span class="mui-tab-label">图表</span>
 			</a>
 			<a class="mui-tab-item" href="tab-list-add.html'">
-				<span class="mui-icon mui-icon-contact"></span>
+				<div id="add-icon">
+					<div></div>
+				</div>
+				<span class="mui-icon"></span>
 				<span class="mui-tab-label">记账</span>
 			</a>
 			<a class="mui-tab-item" href="tab-list-find.html'">
@@ -81,7 +107,7 @@
 					return;
 				}
 				//更换标题
-				title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
+//				title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
 				//显示目标选项卡
 				//若为iOS平台或非首次显示，则直接显示
 				if(mui.os.ios||aniShow[targetTab]){

@@ -1,0 +1,20 @@
+/*
+ *自定义样式 以覆盖MUI样式
+ * */
+html,
+body {
+	background-color: #FFF;
+	background-color: #efeff4;
+}
+.mui-title{
+	color: #000;
+}
+.mui-bar-nav.mui-bar{
+	background-color:#ffd953;
+}
+
+.title{
+	margin: 20px 15px 10px;
+	color: #6d6d72;
+	font-size: 15px;
+}
