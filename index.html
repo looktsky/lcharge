@@ -10,6 +10,8 @@
 		<link rel="stylesheet" href="css/mui.min.css">
 		<link rel="stylesheet" href="css/app.css">
 		<style>
+		
+			/*明细页*/
 			#add-icon {
 				width: 60px;
 				height: 60px;
@@ -37,7 +39,6 @@
 			.mui-tab-label {
 				padding-top: 7px;
 			}
-			/*明细*/
 			
 			.det-title {
 				padding: 8px 0;
@@ -88,6 +89,7 @@
 				font-size: 18px;
 			}
 			
+			/*图表页*/
 			.chart {
 				height: 200px;
 				margin: 0px;
@@ -101,6 +103,15 @@
 			
 			h5:first-child {
 				margin-top: 15px;
+			}
+			/*菜单弹窗*/
+			#menus-list{
+				position: fixed;
+				top: 44px;
+				bottom: 57px;
+				border: 1px solid red;
+				width: 100%;
+				background-color: #fff;
 			}
 		</style>
 	</head>
@@ -137,6 +148,8 @@
 				<span class="mui-tab-label">设置</span>
 			</a>
 		</nav>
+		
+		<!--页面主体-->
 		<div class="mui-content">
 			<div id="detail" class="mui-control-content mui-active">
 
@@ -154,7 +167,7 @@
 						<div>7.00</div>
 					</li>
 				</ul>
-				<div id="status"></div>
+				
 			</div>
 			<div id="charts" class="mui-control-content ">
 				<div class="mui-content">
@@ -197,7 +210,76 @@
 		</div>
 
 		<!--菜单弹窗-->
+		<div id="menus-list">
+			<!--菜单下拉选项-->
+			
+		
+				<ul class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell mui-collapse"><a class="mui-navigate-right" href="#">产品</a>
+						<ul class="mui-table-view mui-table-view-chevron">
+							<li class="mui-table-view-cell"><a class="mui-navigate-right" href="#">iOS</a>
+							</li>
+							<li class="mui-table-view-cell"><a class="mui-navigate-right" href="#">Android</a>
+							</li>
+							<li class="mui-table-view-cell"><a class="mui-navigate-right" href="#">HTML5</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
 
+			
+			
+			
+			
+			<!--<nav class="mui-bar mui-bar-tab">
+				<a id="defaultTab" class="mui-tab-item mui-active" href="#pay">
+					<span class="mui-icon mui-icon-home"></span>
+					<span class="mui-tab-label">明细</span>
+				</a>
+				<a class="mui-tab-item" href="#income">
+					<span class="mui-icon mui-icon-email"></span>
+					<span class="mui-tab-label">图表</span>
+				</a>
+			</nav>-->
+			
+			
+			
+			
+			
+			
+			<!--菜单主体-->
+			
+			<!--<div class="mui-content">
+				<div id="pay" class="mui-control-content mui-active">
+
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+								通用
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div id="income" class="mui-control-content">
+					<div class="mui-content-padded">
+						<div class="flex-container">
+							<a id="icon-icon-contact"><span class="mui-icon mui-icon-contact"></span></a>
+							<a id="icon-person"><span class="mui-icon mui-icon-person"></span></a>
+							<a id="icon-personadd"><span class="mui-icon mui-icon-personadd"></span></a>
+							<a id="icon-phone"><span class="mui-icon mui-icon-phone"></span></a>
+							<a id="icon-email"><span class="mui-icon mui-icon-email"></span></a>
+							<a id="icon-chatbubble"><span class="mui-icon mui-icon-chatbubble"></span></a>
+							<a id="icon-chatboxes"><span class="mui-icon mui-icon-chatboxes"></span></a>
+							<a><span class="mui-icon mui-icon-weibo"></span></a>
+							<a><span class="mui-icon mui-icon-weixin"></span></a>
+							<a><span class="mui-icon mui-icon-pengyouquan"></span></a>
+							<a><span class="mui-icon mui-icon-chat"></span></a>
+							<a><span class="mui-icon mui-icon-qq"></span></a>
+						</div>
+					</div>
+				</div>
+			</div>-->
+		</div>
 		<script src="js/mui.min.js"></script>
 		<script src="js/ldatabase.js"></script>
 		<script src="js/echarts-all.js"></script>
@@ -230,9 +312,15 @@
 			var byId = function(id) {
 				return document.getElementById(id);
 			};
-
 			var lineChart = echarts.init(byId('lineChart'));
 			lineChart.setOption(getOption('line'));
+			
+			
+			//菜单弹窗
+			
+			
+			
+			
 		</script>
 	</body>
 
